@@ -1,8 +1,6 @@
 # Publish to Hexium
 
-A GitHub Action that publishes a Thunderstore-compatible package ZIP directly to the Hexium API. It performs Hexium's multipart upload flow, submits the package, and reports whether Hexium accepted it as hidden.
-
-This Action does not use TCLI and does not publish to Thunderstore.
+A GitHub Action that publishes a package ZIP directly to the Hexium API. It performs Hexium's multipart upload flow, submits the package, and reports whether Hexium accepted it as hidden.
 
 ## Quick start
 

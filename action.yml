@@ -1,5 +1,5 @@
 name: Publish to Hexium
-description: Publish a Thunderstore-compatible package ZIP directly to the Hexium API.
+description: Publish a package ZIP directly to the Hexium API.
 author: Klastic
 branding:
   icon: upload-cloud
