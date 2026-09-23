@@ -1,0 +1,37 @@
+name: Publish to Hexium
+description: Publish a Thunderstore-compatible package ZIP directly to the Hexium API.
+author: Klastic
+branding:
+  icon: upload-cloud
+  color: purple
+inputs:
+  token:
+    description: Hexium team API token. Store this in a GitHub Actions secret.
+    required: true
+  package:
+    description: Path to the package ZIP.
+    required: true
+  author-name:
+    description: Hexium team or author namespace that owns the package.
+    required: true
+  community-categories:
+    description: JSON object mapping community identifiers to arrays of Hexium category names.
+    required: true
+  has-nsfw-content:
+    description: Whether the package contains NSFW content.
+    default: 'false'
+  api-base-url:
+    description: Hexium API base URL. Override only for testing or a documented API migration.
+    default: https://hexium.gg/api/experimental
+outputs:
+  hidden:
+    description: Whether Hexium reported the submitted package as hidden.
+  upload-uuid:
+    description: Hexium user-media upload identifier.
+  package-name:
+    description: Package name read from manifest.json.
+  package-version:
+    description: Package version read from manifest.json.
+runs:
+  using: node24
+  main: dist/index.js
